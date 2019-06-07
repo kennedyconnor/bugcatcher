@@ -13,14 +13,13 @@
           <th scope="col"></th>
         </tr>
       </thead>
-      <!-- <tbody>
-            <tr v-for="">
-              <td @click="selectBug(bug._id)">{{bug.title}}</td>
-              <td>{{bug.creator}}</td>
-              <td class="text-danger" v-if="bug.closed == false">Active</td>
-              <td class="text-primary" v-else>Closed</td>
-            </tr>
-          </tbody> -->
+      <tbody>
+        <tr v-for="note in notes">
+          <td>{{note.creator}}</td>
+          <td>{{note.content}}</td>
+          <button class="btn btn-danger" @click="deleteNote(note._id)">Delete</button>
+        </tr>
+      </tbody>
     </table>
 
   </div>
@@ -35,11 +34,6 @@
     components: {
       NoteForm
     },
-    data() {
-      return {
-
-      }
-    },
 
     computed: {
       notes() {
@@ -51,8 +45,13 @@
     },
 
     methods: {
-      addNote() {
+      deleteNote(noteId) {
+        let ids = {
+          noteId: noteId,
+          bugId: this.bug._id
+        }
 
+        this.$store.dispatch('deleteNote', ids)
       }
     }
   }

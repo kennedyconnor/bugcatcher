@@ -1,7 +1,7 @@
 <template>
   <div class="note-create col">
-    <h4>create note</h4>
-    <form @submit.prevent="handleSubmit" class="note-form">
+    <form @submit.prevent="handleSubmit" class="note-form" v-if="bug.closed == false">
+      <h4>create note</h4>
 
       <div class="form-group">
         <input type="text" class="form-control" v-model="creator" placeholder="Enter your name">
@@ -11,7 +11,7 @@
         <textarea class="form-control" v-model="content" rows="2" placeholder="Enter comment here"></textarea>
       </div>
 
-      <button class="btn btn-success" type="submit" @click="handleSubmit">Create</button>
+      <button class="btn btn-success" type="submit">Create</button>
     </form>
   </div>
 </template>
