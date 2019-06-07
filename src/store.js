@@ -74,12 +74,17 @@ export default new Vuex.Store({
     async getNotes({ dispatch, commit }, id) {
       try {
         let res = await api.get('bugs/' + id + '/notes');
+        console.log('got notes', res.data.results)
         commit('setNotes', res.data.results)
       } catch (error) { console.error(error) }
     },
 
     async addNote({ commit, dispatch }, payload) {
-
+      try {
+        debugger
+        await api.post('bugs/' + payload.bug + '/notes', payload)
+        dispatch('getNotes', payload.bug)
+      } catch (error) { console.error(error) }
     }
 
   }

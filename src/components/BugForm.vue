@@ -18,7 +18,7 @@
           placeholder="describe the bug you are experiencing"></textarea>
       </div>
 
-      <button type="submit">Create</button>
+      <button class="btn btn-success" type="submit">Create</button>
     </form>
 
   </div>
