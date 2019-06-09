@@ -1,9 +1,7 @@
 <template>
   <div class="col">
 
-    <div class="row">
-      <note-form />
-    </div>
+
 
     <table class="table table-dark">
       <thead>
@@ -27,13 +25,9 @@
 
 <script>
 
-  import NoteForm from './NoteForm.vue'
 
   export default {
     name: "BugNotes",
-    components: {
-      NoteForm
-    },
 
     computed: {
       notes() {

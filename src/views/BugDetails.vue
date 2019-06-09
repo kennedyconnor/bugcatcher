@@ -6,6 +6,10 @@
     </div>
 
     <div class="row">
+      <note-form />
+    </div>
+
+    <div class="row">
       <bug-notes />
     </div>
 
@@ -15,6 +19,7 @@
 <script>
   import BugInfo from "@/components/BugInfo.vue"
   import BugNotes from "@/components/BugNotes.vue"
+  import NoteForm from "@/components/NoteForm.vue"
 
   export default {
     name: 'bugDetails',
@@ -25,7 +30,8 @@
     },
     components: {
       BugInfo,
-      BugNotes
+      BugNotes,
+      NoteForm
     },
   }
 </script>
