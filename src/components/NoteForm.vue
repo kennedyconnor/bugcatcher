@@ -41,6 +41,8 @@
           this.$store.dispatch('addNote', newNote)
         }
         else { alert("Fill out all the fields, guy") }
+        this.creator = ""
+        this.content = ""
       }
     },
 
