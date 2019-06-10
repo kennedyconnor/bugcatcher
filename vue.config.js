@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: '/bug-catcher/',
+  publicPath: '/bugcatcher/',
   outputDir: 'docs'
 }
