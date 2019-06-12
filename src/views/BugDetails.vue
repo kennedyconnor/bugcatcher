@@ -23,7 +23,11 @@
 
   export default {
     name: 'bugDetails',
-    props: ["id"],
+    data() {
+      return {
+        id: this.$route.params.id
+      }
+    },
     mounted() {
       this.$store.dispatch('getBugById', this.id)
       this.$store.dispatch('getNotes', this.id)
