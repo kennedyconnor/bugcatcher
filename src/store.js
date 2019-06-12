@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 import router from './router';
-import { SSL_OP_CRYPTOPRO_TLSEXT_BUG } from 'constants';
+
 
 let api = axios.create({
   baseURL: "https://bcw-sandbox.herokuapp.com/api/Connor"

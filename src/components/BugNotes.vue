@@ -1,8 +1,6 @@
 <template>
   <div class="col">
 
-
-
     <table class="table table-dark">
       <thead>
         <tr>
