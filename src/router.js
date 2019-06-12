@@ -19,6 +19,10 @@ export default new Router({
       name: 'details',
       props: true,
       component: BugDetails
+    },
+    {
+      path: '*',
+      redirect: Home
     }
 
   ]

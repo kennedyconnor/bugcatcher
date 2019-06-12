@@ -7,7 +7,7 @@
         <p v-if="bug.closed==false"><b>Status: </b> Active</p>
         <p v-else><b>Status: </b> Closed</p>
         <p><b>Description: </b> {{bug.description}}</p>
-        <button v-if="bug.closed==false" class="btn btn-primary" @click="handleSubmit(bug._id)">Mark as
+        <button v-if="bug.closed==false" class="btn btn-primary" @click="handleSubmit(bug._id)">Update to
           Complete</button>
       </div>
     </div>

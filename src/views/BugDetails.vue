@@ -34,7 +34,7 @@
       }
     },
     mounted() {
-      this.$store.dispatch('selectBug', this.id)
+      this.$store.dispatch('getBugById', this.id)
       this.$store.dispatch('getNotes', this.id)
     },
     components: {
