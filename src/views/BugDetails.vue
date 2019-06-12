@@ -1,6 +1,11 @@
 <template>
   <div class="bug-details container">
-
+    <div class="row">
+      <div class="col">
+        <router-link :to="{name: 'home'}">Return to Home Page
+        </router-link>
+      </div>
+    </div>
     <div class="row">
       <bug-info />
     </div>
