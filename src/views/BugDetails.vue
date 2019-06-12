@@ -28,11 +28,12 @@
 
   export default {
     name: 'bugDetails',
-    data() {
-      return {
-        id: this.$route.params.id
-      }
-    },
+    props: ['id'],
+    // data() {
+    //   return {
+    //     id: this.$route.params.id
+    //   }
+    // },
     mounted() {
       this.$store.dispatch('getBugById', this.id)
       this.$store.dispatch('getNotes', this.id)
